@@ -1,0 +1,90 @@
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+  }
+
+  &__left {
+    width: 60%;
+    margin-right: 40px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__description {
+    margin: 0;
+    text-align: justify;
+  }
+
+  &__list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 145px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    & .about__link svg {
+      margin-right: 20px;
+      fill: var(--mine-shaft);
+      transition: fill 0.2s ease-in-out;
+    }
+
+    & .about__link:hover {
+      color: var(--allports);
+    }
+
+    & .about__link:hover svg {
+      fill: var(--allports);
+    }
+  }
+
+  &__link {
+    color: var(--mine-shaft);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
+  }
+
+  &__resume {
+    display: inline-block;
+    color: var(--mine-shaft);
+    border-bottom: 1px solid var(--mine-shaft);
+    margin-top: 20px;
+    transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--allports);
+      border-color: var(--allports);
+    }
+  }
+}
+
+@include small-tablet {
+  .about {
+    &__left {
+      width: 100%;
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+  }
+}

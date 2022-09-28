@@ -1,0 +1,52 @@
+.footer {
+  padding: 20px 11px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+  &__container {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__copy {
+    margin: 0;
+    color: var(--silver-chalice);
+    font-size: 12px;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    & svg {
+      width: 15px;
+      height: 15px;
+      fill: #aaa;
+      transition: fill 0.2s ease-in-out;
+    }
+
+    &:hover svg {
+      fill: #007199;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    padding: 10px 15px;
+
+    &__copy {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+}

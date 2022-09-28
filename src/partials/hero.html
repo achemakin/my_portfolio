@@ -1,0 +1,22 @@
+<section class="hero">
+  <div class="container hero__container">
+    <div class="hero__wrapper hero__wrapper--main">
+      @if (main === true) {
+      @include('avatar.html')
+      }
+      <h1 class="title hero__title">@title</h1>
+
+      @if (main === true) {
+      <p class="hero__description">Веб-разработчик</p>
+      }
+    </div>
+
+    <div class="fly-elements">
+      <div class="fly-elements__element fly-elements__element_0">{ }</div>
+      <div class="fly-elements__element fly-elements__element_1">&lt;div&gt;</div>
+      <div class="fly-elements__element fly-elements__element_2">&lt;/&gt;</div>
+      <div class="fly-elements__element fly-elements__element_3">{ }</div>
+      <div class="fly-elements__element fly-elements__element_4">#</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --mine-shaft: #2e2e2e;
+  --black-squeeze: #e8f2f6;
+  --allports: #007199;
+  --grey: grey;
+  --catskill-white: #f5f8fa;
+  --cape-cod: #3a4145;
+  --silver-chalice: #aaaaaa;
+}

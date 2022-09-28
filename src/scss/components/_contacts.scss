@@ -1,0 +1,97 @@
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  &__city,
+  &__address,
+  &__link {
+    color: var(--silver-chalice);
+    font-weight: 700px;
+  }
+
+  &__form {
+    grid-column: 1/4;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+
+    & span {
+      display: inline-block;
+      width: 200px;
+      color: var(--silver-chalice);
+    }
+  }
+
+  &__submit {
+    padding: 10px;
+    background-color: transparent;
+    font-weight: 700px;
+    color: var(--silver-chalice);
+    border: 2px solid var(--silver-chalice);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+      color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--black-squeeze);
+      border-color: var(--allports);
+      color: var(--allports);
+    }
+  }
+
+  & input {
+    padding: 10px;
+  }
+}
+
+.just-validate-error-label {
+  font-size: 12px;
+  position: absolute;
+  left: 210px;
+  top: -16px;
+}
+
+@include small-tablet {
+  .contacts {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__form {
+      grid-column: 1/2;
+    }
+
+    &__label {
+      & span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .just-validate-error-label {
+    font-size: 10px;
+    left: 0;
+    top: unset;
+    bottom: -16px;
+  }
+}

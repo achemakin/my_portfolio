@@ -1,0 +1,56 @@
+.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+  &__container {
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo-link,
+  &__link {
+    display: inline-block;
+    padding: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--mine-shaft);
+
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+
+  &__link {
+    font-size: 12px;
+  }
+
+  &__logo-link:hover,
+  &__link:hover {
+    background-color: var(--black-squeeze);
+    color: var(--allports);
+  }
+}
+
+@include mobile {
+  .header {
+    &__container {
+      justify-content: center;
+    }
+
+    &__logo {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__link {
+      font-size: 11px;
+    }
+  }
+}

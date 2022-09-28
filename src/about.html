@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" class="page" prefix="og: //ogp.me/ns#">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/hero.html', {'main': false, 'title': 'Обо мне'})
+
+      @include('partials/me.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
